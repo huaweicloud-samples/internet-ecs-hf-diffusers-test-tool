@@ -1,0 +1,20 @@
+# 凭据经环境变量提供，请勿在此填写真实值
+# 示例：export TF_VAR_access_key="<AK>"
+#       export TF_VAR_secret_key="<SK>"
+
+region            = "cn-north-4"
+project_name      = "gpu-diffusers-bench"
+availability_zone = "cn-north-4a"
+
+# 将下方 <...> 替换为实际值
+ssh_public_key    = "<你的 SSH 公钥全文，例如 ssh-ed25519 AAAA... user@host>"
+image_id          = "<目标区域 GPU 加速型公共镜像 ID>"
+
+# GPU 规格：各区域可选规格不同，部署前请在控制台确认是否可售
+ecs_flavor_id     = "p2s.2xlarge.8"
+
+# 可选：基准测试代码 tarball 公网 URL（留空则部署后手动 SCP 上传 src/）
+app_code_url      = ""
+
+# 建议将 SSH 入站收敛到运维机 IP，例如 "203.0.113.10/32"
+ssh_source_cidr   = "0.0.0.0/0"
