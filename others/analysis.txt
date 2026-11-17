@@ -1,0 +1,61 @@
+============================================
+  AWS Samples 仓库分析报告
+  仓库: /Users/zhangcheng/WorkBuddy/2026-10-19-14-47-39/aws/sample-aws-ec2-hf-diffusers-test-tool
+  时间: Mon Oct 19 14:50:50 CST 2026
+============================================
+
+【1. 基本信息】
+  目录结构:
+    /Users/zhangcheng/WorkBuddy/2026-10-19-14-47-39/aws/sample-aws-ec2-hf-diffusers-test-tool
+    /Users/zhangcheng/WorkBuddy/2026-10-19-14-47-39/aws/sample-aws-ec2-hf-diffusers-test-tool/.git
+    /Users/zhangcheng/WorkBuddy/2026-10-19-14-47-39/aws/sample-aws-ec2-hf-diffusers-test-tool/.git/objects
+    /Users/zhangcheng/WorkBuddy/2026-10-19-14-47-39/aws/sample-aws-ec2-hf-diffusers-test-tool/.git/info
+    /Users/zhangcheng/WorkBuddy/2026-10-19-14-47-39/aws/sample-aws-ec2-hf-diffusers-test-tool/.git/logs
+    /Users/zhangcheng/WorkBuddy/2026-10-19-14-47-39/aws/sample-aws-ec2-hf-diffusers-test-tool/.git/hooks
+    /Users/zhangcheng/WorkBuddy/2026-10-19-14-47-39/aws/sample-aws-ec2-hf-diffusers-test-tool/.git/refs
+
+【2. 语言与运行时】
+  Python 文件数:        1
+  TypeScript 文件数:        0
+  JavaScript 文件数:        0
+  Notebook 文件数:        0
+
+【3. IaC 工具】
+
+【4. AWS 服务依赖】
+  服务清单（按出现频率排序）:
+
+【5. AI 模型与能力】
+  Bedrock 调用:
+
+  Nova 模型引用:
+
+【6. 数据库与存储】
+
+【6.5 数据工程 / ETL 类信号】
+    [ ] 未命中典型数据工程信号（按 AI/Serverless 主流程评估）
+
+============================================
+  止损检查：无对标服务检测（v2.2）
+============================================
+
+  检测结果：
+    [x] 未检测到无对标服务，可继续迁移。
+
+============================================
+  迁移映射建议
+============================================
+| AWS 服务          | 华为云服务           | 对齐度 | 迁移难度 |
+|------------------|---------------------|--------|---------|
+| S3 (S3 SDK 直连) | OBS                 | 完全对齐 | 低     |
+| S3 (S3A/Hadoop)  | OBS (S3A 连接器)    | 部分对齐 | 高     |
+| DynamoDB         | GeminiDB            | 完全对齐 | 低     |
+| Lambda           | FunctionGraph       | 部分对齐 | 中     |
+| API Gateway      | APIG                | 完全对齐 | 低     |
+| Bedrock/Nova     | 盘古+ModelArts      | 部分对齐 | 高     |
+| Cognito          | 自建认证/APIG       | 无对标  | 高     |
+| AppSync          | 自建Apollo on CCE   | 无对标  | 极高    |
+| EventBridge      | DMS RocketMQ        | 无对标  | 高     |
+| CDK              | Terraform 重写       | 无对标  | 高     |
+
+分析完成。请将此报告用于迁移规划。
